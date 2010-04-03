@@ -12,5 +12,3 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend cmdhist
 
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
