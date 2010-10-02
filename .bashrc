@@ -7,6 +7,7 @@ alias la='l -a'
 alias ls='ls --color=auto --group-directories-first'
 alias vi=vim
 alias y=yaourt
+alias df='df -h'
 PS1='[\u@\h \W]\$ '
 
 export HISTCONTROL=erasedups
