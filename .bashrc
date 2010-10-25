@@ -14,4 +14,4 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend cmdhist
 
-alias git='hub'
+which hub > /dev/null 2>/dev/null && alias git='hub'
