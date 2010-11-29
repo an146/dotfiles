@@ -7,7 +7,9 @@ alias ls='ls --color=auto --group-directories-first'
 alias vi=vim
 alias y=yaourt
 alias df='df -h'
+alias godip='godi_console perform'
 alias godib='godi_console perform -build'
+alias godir='godi_console perform -remove'
 
 PS1='[\u@\h \W]\$ '
 export HISTCONTROL=erasedups
