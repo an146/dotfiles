@@ -1,4 +1,12 @@
 .bash_history
 .bash_profile
+.cache
+.fehbg
+.fehrc
+.fontconfig
+.lesshst
+.local
 .ssh
 .viminfo
+
+*.swp
