@@ -7,13 +7,18 @@ src
 .bash_history
 .bash_profile
 .cache
+.dmenu_cache
 .fehbg
 .fehrc
 .fontconfig
+.gitk
+.gstreamer-0.10
 .lesshst
 .local
+.mplayer
 .ncmpcpp
 .ssh
 .viminfo
 
 *.swp
+
