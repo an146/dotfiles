@@ -19,3 +19,4 @@ shopt -s histappend cmdhist
 which hub > /dev/null 2>/dev/null && alias git='hub'
 
 export PATH="$PATH:/home/anton/godi/sbin:/home/anton/godi/bin"
+export EDITOR=vim
