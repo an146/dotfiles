@@ -15,6 +15,7 @@ src
 .gstreamer-0.10
 .lesshst
 .local
+.lyrics
 .mplayer
 .ncmpcpp
 .ssh
