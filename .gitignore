@@ -6,6 +6,7 @@ src
 
 .bash_history
 .bash_profile
+.bitcoin/
 .cache
 .dmenu_cache
 .fehbg
@@ -16,9 +17,13 @@ src
 .lesshst
 .local
 .lyrics
+.macromedia/
+.mc/
 .mplayer
 .ncmpcpp
+.sqlite_history
 .ssh
+.vim/
 .viminfo
 
 *.swp
