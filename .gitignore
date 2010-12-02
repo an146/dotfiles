@@ -5,24 +5,23 @@ src
 .Xauthority
 
 .bash_history
-.bash_profile
 .bitcoin/
-.cache
+.cache/
 .dmenu_cache
 .fehbg
 .fehrc
-.fontconfig
+.fontconfig/
 .gitk
-.gstreamer-0.10
+.gstreamer-0.10/
 .lesshst
-.local
-.lyrics
+.local/
+.lyrics/
 .macromedia/
 .mc/
-.mplayer
-.ncmpcpp
+.mplayer/
+.ncmpcpp/
 .sqlite_history
-.ssh
+.ssh/
 .vim/
 .viminfo
 
