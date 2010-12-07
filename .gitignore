@@ -1,5 +1,6 @@
 beepie
 godi
+smpd
 src
 
 .Xauthority
@@ -20,8 +21,10 @@ src
 .mc/
 .mplayer/
 .ncmpcpp/
+.rcc/
 .sqlite_history
 .ssh/
+.subversion/
 .vim/
 .viminfo
 
