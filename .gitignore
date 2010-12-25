@@ -1,13 +1,14 @@
-beepie
 godi
-smpd
+msrc
 src
 
 .Xauthority
 
+.angband/
 .bash_history
 .bitcoin/
 .cache/
+.dbus/
 .dmenu_cache
 .fehbg
 .fehrc
@@ -22,11 +23,18 @@ src
 .mozilla/
 .mplayer/
 .ncmpcpp/
+.ocaml_history
+.pulse/
+.pulse-cookie
 .rcc/
+.Skype/
+.slocdata/
 .sqlite_history
 .ssh/
 .subversion/
 .viminfo
+.warsow-0.5/
+.wine/
 
 *.swp
 
