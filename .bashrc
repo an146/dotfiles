@@ -10,6 +10,9 @@ alias df='df -h'
 alias godip='godi_console perform'
 alias godib='godi_console perform -build'
 alias godir='godi_console perform -remove'
+alias angband='angband -mgcu -- -b'
+alias mp='mplayer'
+alias ocaml='rlwrap ocaml'
 
 PS1='[\u@\h \W]\$ '
 export HISTCONTROL=erasedups

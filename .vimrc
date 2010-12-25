@@ -75,3 +75,7 @@ set ttymouse=xterm2
 
 set list
 set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+
+nmap <F9> :wall<CR>:make<CR>
+nmap <F11> :cnext<CR>
+nmap <F12> :A<CR>
