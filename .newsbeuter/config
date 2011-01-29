@@ -1,0 +1,6 @@
+browser surf
+
+auto-reload yes
+reload-threads 100
+show-read-articles no
+show-read-feeds no
