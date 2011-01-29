@@ -1,6 +1,7 @@
 Desktop
 
 godi
+mail
 msrc
 savage-xr
 shit
@@ -13,6 +14,7 @@ src
 .bash_history
 .bitcoin/
 .cache/
+.claws-mail/
 .dbus/
 .dmenu_cache
 .fehbg
