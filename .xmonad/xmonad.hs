@@ -25,6 +25,7 @@ conf = defaultConfig
     , ("M-S-w",         spawn "surf")
     , ("M-e",           spawn "gvim ~/.xmonad/xmonad.hs")
     , ("M-r",           spawn "urxvt -e newsbeuter")
+    , ("M-'",           spawn "urxvt -e ncmpcpp")
     ]
         where
             tiled = Tall 1 (2%100) (3%4)
