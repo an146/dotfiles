@@ -1,7 +1,12 @@
+Desktop
+
 godi
 msrc
+savage-xr
+shit
 src
 
+.Skype
 .Xauthority
 
 .angband/
@@ -13,8 +18,12 @@ src
 .fehbg
 .fehrc
 .fontconfig/
+.gervill/
 .gitk
+.gnome/
 .gstreamer-0.10/
+.installjammerinfo/
+.java/
 .lesshst
 .local/
 .lyrics/
@@ -23,18 +32,23 @@ src
 .mozilla/
 .mplayer/
 .ncmpcpp/
+.ocamldebug_history
 .ocaml_history
 .pulse/
 .pulse-cookie
 .rcc/
-.Skype/
+.savage/
+.skype/
 .slocdata/
 .sqlite_history
 .ssh/
 .subversion/
+.surf/
+.tuxguitar-1.2/
 .viminfo
 .warsow-0.5/
 .wine/
+.wireshark/
 
 *.swp
 
