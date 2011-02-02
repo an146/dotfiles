@@ -25,7 +25,11 @@ conf = defaultConfig
     , ("M-S-w",         spawn "surf")
     , ("M-e",           spawn "gvim ~/.xmonad/xmonad.hs")
     , ("M-r",           spawn "urxvt -e newsbeuter")
+    , ("M-S-r",         spawn "gvim ~/.newsbeuter/urls")
     , ("M-'",           spawn "urxvt -e ncmpcpp")
+    , ("M-p",           spawn "claws-mail")
+    , ("M-<F2>",        spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+    , ("M-v",           spawn "surf http://vkontakte.ru/feed")
     ]
         where
             tiled = Tall 1 (2%100) (3%4)
