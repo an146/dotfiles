@@ -55,13 +55,7 @@ set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set nobomb
 set ffs=unix,dos
-
-if has('gui_running')
-	"colorscheme ir_black
-	colorscheme peachpuff
-else
-	colorscheme desert
-endif
+set number
 
 filetype plugin on
 filetype indent on
@@ -79,4 +73,8 @@ set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 nmap <F9> :wall<CR>:make<CR>
 nmap <F11> :cnext<CR>
 nmap <F12> :A<CR>
+
 map <C-F> :FuzzyFinderTextMate<CR>
+let g:fuzzy_ignore='_build/*;.git/*'
+
+colorscheme wombat
