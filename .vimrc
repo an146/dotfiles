@@ -55,7 +55,6 @@ set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set nobomb
 set ffs=unix,dos
-set number
 
 filetype plugin on
 filetype indent on
@@ -77,4 +76,9 @@ nmap <F12> :A<CR>
 map <C-F> :FuzzyFinderTextMate<CR>
 let g:fuzzy_ignore='_build/*;.git/*'
 
-colorscheme wombat
+if has('gui_running')
+	set number
+	colorscheme wombat
+else
+	colorscheme desert
+endif
