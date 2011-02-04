@@ -22,7 +22,7 @@ conf = defaultConfig
     , ("M-[",           spawn "mpc prev")
     , ("M-]",           spawn "mpc next")
     , ("M-w",           spawn "uzbl-browser")
-    , ("M-S-w",         spawn "surf")
+    , ("M-S-w",         spawn "surf google.com")
     , ("M-e",           spawn "gvim ~/.xmonad/xmonad.hs")
     , ("M-r",           spawn "urxvt -e newsbeuter")
     , ("M-S-r",         spawn "gvim ~/.newsbeuter/urls")
