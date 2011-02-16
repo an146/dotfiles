@@ -1,7 +1,10 @@
 Trolltech.conf
 
+chromium/
 gtk-2.0
 menus
 qBittorrent/
 rncbc.org
 smplayer
+
+.libreoffice/
