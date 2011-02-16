@@ -32,7 +32,7 @@ conf = defaultConfig
     , ("M-v",           spawn "surf http://vkontakte.ru/feed")
     , ("M-o",           spawn "ocamlbrowser -I /home/anton/godi/lib/ocaml/pkg-lib/lablgtk2 -I /home/anton/godi/lib/ocaml/pkg-lib/react")
     , ("M-S-o",         spawn "surf file:///home/anton/src/batteries-included/apidocs/index.html")
-    , ("M-g",           spawn "surf google.ru/search?q=`xclip -o`")
+    , ("M-g",           spawn "surf \"google.ru/search?q=`xclip -o`\"")
     ]
         where
             tiled = Tall 1 (2%100) (3%4)
