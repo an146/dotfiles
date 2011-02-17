@@ -79,6 +79,6 @@ let g:fuzzy_ignore='_build/*;.git/*'
 if has('gui_running')
 	set number
 	colorscheme wombat
-else
-	colorscheme desert
+"else
+"	colorscheme desert
 endif
