@@ -29,10 +29,12 @@ conf = defaultConfig
     , ("M-'",           spawn "urxvt -e ncmpcpp")
     , ("M-p",           spawn "surf mail.yandex.ru")
     , ("M-<F2>",        spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+    , ("M-<F4>",        kill)
     , ("M-v",           spawn "surf http://vkontakte.ru/feed")
     , ("M-o",           spawn "ocamlbrowser -I /home/anton/godi/lib/ocaml/pkg-lib/lablgtk2 -I /home/anton/godi/lib/ocaml/pkg-lib/react")
     , ("M-S-o",         spawn "surf file:///home/anton/src/batteries-included/apidocs/index.html")
-    , ("M-g",           spawn "surf \"google.ru/search?q=`xclip -o`\"")
+    , ("M-S-g",         spawn "surf \"google.ru/search?q=`xclip -o`\"")
+    , ("M-g",           spawn "surf \"google.ru/search?q=`dmenu`\"")
     ]
         where
             tiled = Tall 1 (2%100) (3%4)
