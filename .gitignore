@@ -14,6 +14,7 @@ src/
 .AbiSuite/
 
 .angband/
+.audacity-data/
 .bash_history
 .bitcoin/
 .cache/
@@ -35,10 +36,13 @@ src/
 .gitk
 .gnome/
 .gstreamer-0.10/
+.gtkrc-2.0
+.gtkrc-2.0.bak
 .icons/
 .installjammerinfo/
 .java/
 .kde4/
+.lablgtk2_history
 .lesshst
 .lyrics/
 .macromedia/
@@ -48,6 +52,7 @@ src/
 .ncmpcpp/
 .ocamldebug_history
 .ocaml_history
+.odesk/
 .omake/
 .opera/
 .pki/
@@ -63,11 +68,13 @@ src/
 .ssh/
 .subversion/
 .surf/
+.thumbnails/
 .tuxguitar-1.2/
 .vimfuzzyfinder
 .viminfo
 .warsow-0.5/
 .wine/
 .wireshark/
+.xdvirc
 
 *.swp
