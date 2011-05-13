@@ -56,8 +56,7 @@ set fileencodings=utf-8,cp1251
 set nobomb
 set ffs=unix,dos
 
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 "turn on syntax highlighting
 syntax on
@@ -72,9 +71,11 @@ set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 nmap <F9> :wall<CR>:make<CR>
 nmap <F11> :cnext<CR>
 nmap <F12> :A<CR>
+nmap <C-j> <C-w>j<C-w>_
+nmap <C-k> <C-w>k<C-w>_
 
 map <C-F> :FuzzyFinderTextMate<CR>
-let g:fuzzy_ignore='_build/*;.git/*'
+let g:fuzzy_ignore='_build/*;.git/*;*.o'
 
 if has('gui_running')
 	set number
@@ -82,3 +83,8 @@ if has('gui_running')
 "else
 "	colorscheme desert
 endif
+
+" russian language
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0

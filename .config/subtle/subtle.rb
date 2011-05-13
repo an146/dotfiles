@@ -411,6 +411,7 @@ grab "W-KP_3", [ :bottom_right, :bottom_right66, :bottom_right33 ]
 grab "W-Return", "urxvt"
 grab "W-p", "gmrun"
 grab "W-e", "urxvt -name subtleconfig -e vim ~/.config/subtle/subtle.rb"
+grab "W-backslash", "mocp -G"
 
 # Run Ruby lambdas
 grab "S-F2" do |c|
@@ -695,7 +696,7 @@ grab "W-5", :ViewSwitch5
 grab "W-6", :ViewSwitch6
 grab "W-7", :ViewSwitch7
 grab "W-8", :ViewSwitch8
-grab "W-9", :ViewSwitch9
+grab "W-9", :ViewSwitch8
 
 grab "W-w", :ViewSwitch3
 grab "W-d", :ViewSwitch4

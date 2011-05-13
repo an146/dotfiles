@@ -1,9 +1,9 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
-alias l='ls -l -F --color=auto --group-directories-first'
+alias l='/bin/ls -l -F --color=auto --group-directories-first'
 alias la='l -a'
-alias ls='ls --color=auto --group-directories-first'
+alias ls='/bin/ls --color=auto --group-directories-first'
 alias vi=vim
 alias y=yaourt
 alias df='df -h'
@@ -11,7 +11,7 @@ alias godip='godi_console perform'
 alias godib='godi_console perform -build'
 alias godir='godi_console perform -remove'
 alias angband='angband -mgcu -- -b'
-alias mp='mplayer'
+alias mp='mplayer -subcp cp1251'
 alias ocaml='rlwrap ocaml'
 alias ocamldebug='rlwrap ocamldebug'
 
