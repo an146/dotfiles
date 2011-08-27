@@ -3,6 +3,7 @@ set backspace=indent,eol,start
 set history=1000
 set showcmd
 set showmode
+set hid
 
 set nowrap
 set linebreak
@@ -73,6 +74,8 @@ nmap <F11> :cnext<CR>
 nmap <F12> :A<CR>
 nmap <C-j> <C-w>j<C-w>_
 nmap <C-k> <C-w>k<C-w>_
+nmap <C-h> :bprev<CR>
+nmap <C-l> :bnext<CR>
 
 map <C-F> :FuzzyFinderTextMate<CR>
 let g:fuzzy_ignore='_build/*;.git/*;*.o'
@@ -88,3 +91,7 @@ endif
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
+set wrap
+
+imap <F12> 
+cmap <F12> 
