@@ -24,6 +24,7 @@ src/
 .darcs/
 .dbus/
 .designer/
+.dialyzer_plt
 .dmenu_cache
 .dvdcss/
 .esd_auth
