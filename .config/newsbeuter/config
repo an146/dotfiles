@@ -1,4 +1,4 @@
-browser surf
+browser firefox
 
 auto-reload yes
 reload-threads 100
