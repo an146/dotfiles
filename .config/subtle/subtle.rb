@@ -33,7 +33,7 @@ set :gravity, :center
 set :urgent, false
 
 # Honor resize size hints globally
-set :resize, false
+set :resize, true
 
 # Screen strut for e.g. other panels (left, right, top, bottom)
 set :strut, [ 0, 0, 0, 0 ]
@@ -55,7 +55,7 @@ set :separator, "|"
 set :outline, 0
 
 # Set the WM_NAME of subtle (Java quirk)
-# set :wmname, "LG3D"
+set :wmname, "LG3D"
 
 #
 # == Screen
@@ -219,6 +219,7 @@ gravity :top_right33,    [ 100,   0,  50,  34 ]
 gravity :left,           [   0,   0,  50, 100 ]
 gravity :left66,         [   0,  50,  50,  34 ]
 gravity :left33,         [   0,  50,  25,  34 ]
+gravity :left66x,        [   0,   0,  75, 100 ]
 
   # Center
 gravity :center,         [   0,   0, 100, 100 ]
@@ -229,6 +230,7 @@ gravity :center33,       [  50,  50,  50,  34 ]
 gravity :right,          [ 100,   0,  50, 100 ]
 gravity :right66,        [ 100,  50,  50,  34 ]
 gravity :right33,        [ 100,  50,  25,  34 ]
+gravity :right33x,       [ 100,   0,  25, 100 ]
 
   # Bottom left
 gravity :bottom_left,    [   0, 100,  50,  50 ]
@@ -383,9 +385,9 @@ grab "W-c", :WindowKill
 grab "W-KP_7", [ :top_left,     :top_left66,     :top_left33     ]
 grab "W-KP_8", [ :top,          :top66,          :top33          ]
 grab "W-KP_9", [ :top_right,    :top_right66,    :top_right33    ]
-grab "W-KP_4", [ :left,         :left66,         :left33         ]
+grab "W-KP_4", [ :left,         :left66,         :left33         , :left66x ]
 grab "W-KP_5", [ :center,       :center66,       :center33       ]
-grab "W-KP_6", [ :right,        :right66,        :right33        ]
+grab "W-KP_6", [ :right,        :right66,        :right33        , :right33x]
 grab "W-KP_1", [ :bottom_left,  :bottom_left66,  :bottom_left33  ]
 grab "W-KP_2", [ :bottom,       :bottom66,       :bottom33       ]
 grab "W-KP_3", [ :bottom_right, :bottom_right66, :bottom_right33 ]
@@ -409,9 +411,12 @@ grab "W-KP_3", [ :bottom_right, :bottom_right66, :bottom_right33 ]
 
 # Exec programs
 grab "W-Return", "urxvt"
+grab "W-S-Return", "urxvt -name devterm"
 grab "W-p", "gmrun"
-grab "W-e", "urxvt -name subtleconfig -e vim ~/.config/subtle/subtle.rb"
-grab "W-backslash", "mocp -G"
+#grab "W-e", "urxvt -name subtleconfig -e vim ~/.config/subtle/subtle.rb"
+grab "W-e", "urxvt -name subtleconfig -e vim ~/src/subtle-git/data/subtle.rb"
+grab "W-backslash", "mocp --toggle-pause"
+grab "W-BackSpace", "mocp --seek -3"
 
 # Run Ruby lambdas
 grab "S-F2" do |c|
@@ -543,11 +548,12 @@ end
 
 # Simple tags
 # tag "terms",   "xterm|[u]?rxvt"
-tag "browser", "uzbl|opera|firefox|navigator"
+tag "browser", "uzbl|opera|firefox|navigator|chromium"
 tag "mail",    "thunderbird"
 tag "torrent", "qbittorrent"
 tag "vm",      "VirtualBox"
 tag "dev",     "devterm|beepie"
+tag "im",      "skype|xchat"
 
 # Placement
 tag "music" do
@@ -565,6 +571,14 @@ end
 tag "editor" do
   match  "[g]?vim"
   resize true
+end
+
+tag "poker" do
+  match "PokerStars"
+end
+
+tag "evince" do
+  match "evince"
 end
 
 tag "fixed" do
@@ -585,7 +599,7 @@ end
 tag "stick" do
   match "mplayer"
   float true
-  stick true
+#  stick true
 end
 
 tag "urgent" do
@@ -598,6 +612,10 @@ end
 tag "float" do
   match "display"
   float true
+end
+
+tag "gnuplot" do
+  match   :name => "Gnuplot.*"
 end
 
 # Gimp
@@ -614,6 +632,10 @@ end
 tag "gimp_dock" do
   match   :role => "gimp-dock"
   gravity :gimp_dock
+end
+
+tag "gimp_something" do
+  match   :role => "gimp.*"
 end
 
 #
@@ -679,13 +701,15 @@ end
 
 # view "terms", "terms|default"
 view "def",     "default"
-view "gimp",    "gimp_.*"
+view "gimp",    "gimp_.*|evince"
 view "Www",     "browser"
-view "Dev",     "editor|dev"
+view "Dev",     "editor|dev|gnuplot"
 view "Torrent", "torrent"
 view "Vm",      "vm"
+view "pOker",   "poker"
 view "Mail",    "mail"
 view "mUsic",   "music"
+view "Im",      "im"
 
 # Switch current view
 grab "W-1", :ViewSwitch1
@@ -696,14 +720,16 @@ grab "W-5", :ViewSwitch5
 grab "W-6", :ViewSwitch6
 grab "W-7", :ViewSwitch7
 grab "W-8", :ViewSwitch8
-grab "W-9", :ViewSwitch8
+grab "W-9", :ViewSwitch9
 
 grab "W-w", :ViewSwitch3
 grab "W-d", :ViewSwitch4
 grab "W-t", :ViewSwitch5
 grab "W-v", :ViewSwitch6
-grab "W-m", :ViewSwitch7
-grab "W-u", :ViewSwitch8
+grab "W-o", :ViewSwitch7
+grab "W-m", :ViewSwitch8
+grab "W-u", :ViewSwitch9
+grab "W-i", :ViewSwitch10
 
 #
 # == Sublets
@@ -753,7 +779,7 @@ grab "W-u", :ViewSwitch8
 
 sublet :clock2 do
   interval      1
-  time_format "%H:%M:%S"
+  time_format "%X"
   date_format "%A %d/%m/%y"
   time_color  "#eeeeee"
   date_color  "#888888"
