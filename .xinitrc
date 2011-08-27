@@ -10,9 +10,9 @@ setxkbmap -option grp_led:scroll
 tilda 2>&1 > /dev/null &
 urxvt &
 #audacious &
-urxvt -name "mocp" -e mocp
+urxvt -name "mocp" -e mocp &
 firefox &
 thunderbird &
-qbittorrent &
 urxvt -name "devterm" &
-exec subtle
+#exec subtle
+exec ~/src/world/subtle/subtle -c ~/src/world/subtle/data/subtle.rb
